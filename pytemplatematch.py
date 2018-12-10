@@ -5,6 +5,7 @@ import imutils
 import cv2
 from pathlib import Path
 
+#this is a simple template matching script. it finds a single match even if there are more
 
 picpath = str(Path.home()) + "/Pictures/"
 
