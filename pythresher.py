@@ -21,12 +21,14 @@ w, h = template.shape[::-1]
 
 #res is a list of minmax values?
 res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
-print(type(res), res) #res is a numpy array?
-print(cv2.minMaxLoc(res))#returns most different, most similar matches 
-print(res[752,32], res[57,371])#res uses pixel locations as index numbers
+#print(type(res), res) #res is a numpy array?
+#print(cv2.minMaxLoc(res))#returns most different, most similar matches 
+#print(res[752,32], res[57,371])#res uses pixel locations as index numbers
 threshold = 0.9
 loc = np.where( res >= threshold)
-print(type(loc), loc)
+#print(type(loc), loc)
+print(len(loc[1]))
+print(zip(*loc[::-1]))
 for pt in zip(*loc[::-1]):
     print(pt)#these are the matching objects?
     cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
