@@ -27,7 +27,7 @@ res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
 threshold = 0.9
 loc = np.where( res >= threshold)
 #print(type(loc), loc)
-print(len(loc[1]))
+print(len(loc[1]))#number of matches
 print(zip(*loc[::-1]))
 for pt in zip(*loc[::-1]):
     print(pt)#these are the matching objects?
