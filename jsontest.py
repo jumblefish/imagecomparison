@@ -41,7 +41,7 @@ for x in colorlist:
                     "color": x,
                     "print_urls": True,
                     "times": "past-7-days",
-                    "formats": y,
+                    "format": y,
                     "sizes": z,
                     "chromedriver": "/usr/bin/chromedriver"
                 })
